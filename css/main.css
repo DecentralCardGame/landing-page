@@ -1,0 +1,275 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* Flexbox
+// ================================================== */
+.d--f  { display: flex; }
+.d--if { display: inline-flex; }
+
+/* Flex direction */
+.fd--r  { flex-direction: row; } /* Default */
+.fd--rr { flex-direction: row-reverse; }
+.fd--c  { flex-direction: column; }
+.fd--cr { flex-direction: column-reverse; }
+
+
+/* Flex wrap */
+.fw--n  { flex-wrap: nowrap; } /* Default */
+.fw--w  { flex-wrap: wrap; }
+.fw--wr { flex-wrap: wrap-reverse; }
+
+
+/* Justify content */
+.jc--fe { justify-content: flex-end; }
+.jc--fs { justify-content: flex-start; } /* Default */
+.jc--c  { justify-content: center; }
+.jc--sa { justify-content: space-around; }
+.jc--sb { justify-content: space-between; }
+
+
+/* Align items */
+.ai--fs { align-items: flex-start; }
+.ai--c  { align-items: center; }
+.ai--fe { align-items: flex-end; }
+.ai--s  { align-items: stretch; } /* Default */
+.ai--b  { align-items: baseline; }
+
+
+/* Flex grow */
+.fg--0 { flex-grow: 0; } /* Default */
+.fg--1 { flex-grow: 1; }
+
+
+/* Flex shrink */
+.fs--0 { flex-shrink: 0; }
+.fs--1 { flex-shrink: 1; } /* Default */
+
+
+/* Flex basis */
+.fb--a { flex-basis: auto; } /* Default */
+.fb--0 { flex-basis: 0; }
+
+
+/* Align self */
+.as--a  { align-self: auto; } /* Default */
+.as--fs { align-self: flex-start; }
+.as--c  { align-self: center; }
+.as--fe { align-self: flex-end; }
+.as--s  { align-self: stretch; }
+.as--b  { align-self: baseline }
+
+
+
+/** CUSTOM **/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    padding: 10px;
+    line-height: 18px;
+    background: #d5f1ff;
+    color: #111;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /*http://www.heropatterns.com/*/
+}
+
+a { color: #444; }
+
+
+content, tile {
+    display: block;
+}
+
+content {
+    max-width: 800px;
+    margin: auto;
+}
+
+
+header {
+    margin: 30px;
+    margin-bottom: 40px;
+}
+
+header content {
+    position: relative;
+    padding: 10px 15px;
+}
+
+header .logo {
+    display: block;
+    height: 52px;
+    margin-right: 20px;
+}
+
+header h1 {
+    display: block;
+    line-height: 52px;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.social-telegram {
+    font-size: 20px;
+    color: #07b0ff;    
+}
+
+h2 {
+    font-size: 17px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+footer {
+    font-size: 80%;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+
+tile {
+    position: relative;
+    background: #c5ecff;
+    padding: 30px;
+}
+
+.button-group {
+    margin: auto;
+}
+
+
+.button-cta {
+    position: relative;
+    background: #c5ecff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease-out;
+}
+
+.button-group .button-cta:not(:last-child) {
+    border-right: 4px solid #d5f1ff;
+}
+
+
+.button-cta:first-child {
+    padding-left: 30px;
+}
+
+.button-cta:last-child {
+    padding-right: 30px;
+}
+
+.button-cta i {
+    float: left;
+    margin-right: 14px;
+    color: #07b0ff;
+    font-size: 20px
+}
+
+.button-cta:hover {
+    background: #a9e4ff;
+}
+
+tile,
+.button-group {
+    margin-bottom: 24px;
+}
+
+strong {
+    font-weight: 700;
+}
+
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+
+@media only screen and (max-width: 600px) {
+    header .d--f {
+        display: block;
+    }
+
+    header .d--f > * {
+        margin: auto;
+        text-align: center;
+    }
+}
+
+
+.lt, .rt, .rb, .lb {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+
+.lt { border-width: 16px 16px 0 0; border-color: #d5f1ff transparent transparent transparent; }
+.rt { border-width: 0 16px 16px 0; border-color: transparent #d5f1ff transparent transparent; }
+.lb { border-width: 16px 0 0 16px; border-color: transparent #d5f1ff transparent #d5f1ff; }
+.rb { border-width: 0 0 16px 16px; border-color: #d5f1ff #d5f1ff #d5f1ff transparent; }
+
+.lt, .rt { top: 0; }
+.lb, .rb { bottom: 0; }
+.lt, .lb { left: 0; }
+.rb, .rt { right: 0; }
