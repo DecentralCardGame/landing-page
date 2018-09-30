@@ -7,4 +7,4 @@ branches:
   only:
     - master
 script:
-- pyftpsync upload . --exclude ".git,.travis*" ftp://$FTP_USER:$FTP_PASSWORD@davidgengenbach.de/sites/decentral-card.net/
+- pyftpsync upload . --exclude ".git*,.travis*" ftp://$FTP_USER:$FTP_PASSWORD@davidgengenbach.de/sites/decentral-card.net/
