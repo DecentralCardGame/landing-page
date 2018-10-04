@@ -1,3 +1,4 @@
+sudo: false
 language: python
 python:
 - 3.6
@@ -7,7 +8,7 @@ branches:
   only:
   - master
 script:
-- pyftpsync upload . --exclude ".git*,.travis*" ftp://$FTP_USER:$FTP_PASSWORD@davidgengenbach.de/sites/decentral-card.net/
+- pyftpsync upload . --verbose --exclude ".git*,.travis*" ftp://$FTP_USER:$FTP_PASSWORD@davidgengenbach.de/sites/decentral-card.net/
 notifications:
   slack:
     secure: KUymAAAXLQAkN+58IUcx/4VTX7iNLIKxjkV7ybo0Z+ikuCQy6lPlBZyFyx1x+fhHp+g5+UVcHhVd3+BEGRQGv0tBde0we5hn7CjGtBG/LeCbX1J675UkoEAngdU5SRqUSNySK7Wfggpk0AZhPZTJa5Z7YQack7XVe7LlFFripBemrstA+ueeD45xvUEgnzE92jC6Gf1HTl7nxIR/Nia473nEZdj0iyz17CO+hqkLiftD+Mj9m9AAQYQ58VPCsU/2DrjjcVkGRjGOgOmniK6DKxna7fXhvWrreS7Pfq6oTGF4Wn5i43UljkvQ9HwXZ1aCjQhVtvHJ5QngHiy1AOfieeUWbbFRC0yNlDjYXKgWuBJJFUaFaJVgGNbW+KZDsMOfGZmr2iUwcV4B14ZyvNYZavgU65E7Xfcj96pE8Rqa5NV0bwf9rFbnPKkteeZybHxptCI7DIY3Yy7poO+smwcheI1AirGc/7OkhmRdY7XwczrBrwvbT++/eK6SZ8ekUBRJGmo38gfmRITxtul5gzEP8Pq0WLdnNYKiBhN8xsAGR2wiyNyZOXdiS5vDy3g7K/6Pc7emdR4KmP1rK7Ft8icV8k5/gt+tmLaxDk7e97fM0CeUps9GNm9zivklOjo0e0kk+dxJYjjKNu3fMlRCaqdGd6nTGVnEkinZ60mE7aCfo64=
