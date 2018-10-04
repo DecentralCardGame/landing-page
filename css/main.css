@@ -106,6 +106,16 @@ table {
 .as--b  { align-self: baseline }
 
 
+.lt { border-width: 16px 16px 0 0; border-color: #d5f1ff transparent transparent transparent; }
+.rt { border-width: 0 16px 16px 0; border-color: transparent #d5f1ff transparent transparent; }
+.lb { border-width: 16px 0 0 16px; border-color: transparent transparent transparent #d5f1ff; }
+.rb { border-width: 0 0 16px 16px; border-color: transparent transparent #d5f1ff transparent; }
+
+.lt, .rt { top: 0; }
+.lb, .rb { bottom: 0; }
+.lt, .lb { left: 0; }
+.rb, .rt { right: 0; }
+
 
 /** CUSTOM **/
 
@@ -117,7 +127,7 @@ body {
     font-family: 'Nunito', sans-serif;
     font-size: 16px;
     padding: 10px;
-    line-height: 18px;
+    line-height: 1.2;
     background: #d5f1ff;
     color: #111;
     -webkit-font-smoothing: antialiased;
@@ -208,6 +218,11 @@ tile {
     transition: all 0.3s ease-out;
 }
 
+
+.button-cta:visited {
+    background: #c5ecff;
+}
+
 .button-group .button-cta:not(:last-child) {
     border-right: 4px solid #d5f1ff;
 }
@@ -245,6 +260,12 @@ strong {
 .text-center { text-align: center; }
 
 @media only screen and (max-width: 600px) {
+    header h1 {
+        padding-top: 20px;
+        line-height: 1.16;
+    }
+
+
     header .d--f {
         display: block;
     }
@@ -272,14 +293,3 @@ strong {
     height: 0;
     border-style: solid;
 }
-
-
-.lt { border-width: 16px 16px 0 0; border-color: #d5f1ff transparent transparent transparent; }
-.rt { border-width: 0 16px 16px 0; border-color: transparent #d5f1ff transparent transparent; }
-.lb { border-width: 16px 0 0 16px; border-color: transparent #d5f1ff transparent #d5f1ff; }
-.rb { border-width: 0 0 16px 16px; border-color: #d5f1ff #d5f1ff #d5f1ff transparent; }
-
-.lt, .rt { top: 0; }
-.lb, .rb { bottom: 0; }
-.lt, .lb { left: 0; }
-.rb, .rt { right: 0; }
