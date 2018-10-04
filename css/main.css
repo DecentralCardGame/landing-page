@@ -253,6 +253,16 @@ strong {
         margin: auto;
         text-align: center;
     }
+
+
+    .button-group > a {
+        text-align: center;
+    }
+
+    .button-group > a > i {
+        float: none;
+        margin: 4px 14px;
+    }
 }
 
 
