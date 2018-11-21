@@ -105,6 +105,12 @@ table {
 .as--s  { align-self: stretch; }
 .as--b  { align-self: baseline }
 
+.lt, .rt, .rb, .lb {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
 
 .lt { border-width: 16px 16px 0 0; border-color: #d5f1ff transparent transparent transparent; }
 .rt { border-width: 0 16px 16px 0; border-color: transparent #d5f1ff transparent transparent; }
@@ -207,7 +213,8 @@ tile {
 }
 
 
-.button-cta {
+.button-cta,
+.button-cta:visited {
     position: relative;
     background: #c5ecff;
     border: none;
@@ -218,9 +225,8 @@ tile {
     transition: all 0.3s ease-out;
 }
 
-
-.button-cta:visited {
-    background: #c5ecff;
+.button-cta:hover {
+    background: #a9e4ff;
 }
 
 .button-group .button-cta:not(:last-child) {
@@ -241,10 +247,6 @@ tile {
     margin-right: 14px;
     color: #07b0ff;
     font-size: 20px
-}
-
-.button-cta:hover {
-    background: #a9e4ff;
 }
 
 tile,
@@ -284,12 +286,4 @@ strong {
         float: none;
         margin: 4px 14px;
     }
-}
-
-
-.lt, .rt, .rb, .lb {
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-style: solid;
 }
